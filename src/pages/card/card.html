@@ -1,0 +1,52 @@
+<!--
+  Generated template for the CardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <ion-row>
+        <ion-col>
+          <ion-title>Pagamento</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <p class="title">VALOR: R$ {{total | number:'1.2-2'}}</p>
+  <p><img class="img" src="assets/imgs/card.png" alt=""></p>
+
+  <ion-item>
+    <ion-label stacked>Nome</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>CPF</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Número</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Código de Segurança</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Vencimento</ion-label>
+    <ion-datetime displayFormat="DD MMM, YYYY" max="2042"></ion-datetime>
+  </ion-item>
+
+  <p>
+    <button ion-button round (click)="goFinish()" class="buttoncenter">
+      Finalizar Compra
+    </button>
+  </p>
+</ion-content>

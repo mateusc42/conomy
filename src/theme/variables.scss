@@ -1,0 +1,192 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #ff9933, //cor inicial do gradiente, cor principal
+  secondary:  #cc6600, //segunda cor do gradiente, cor secundariia
+  danger:     #c00000, //cor de alerta. Ex: botão de cancelar
+  light:      #F3F3F3, //tonalizade de cinza claro para itens secundário
+  dark:       #7C7B7B, //tonalizade de cinza escuro para itens secundário
+  lightdark:  #CCCCCC, //cinza para ações secundárias
+  pearl:      #ffffff, //constraste com a principal
+  success:    #008001, //cor para situações positivas
+  warning:    #ffc000, //cor para alertas
+  gradient-primary: #ff9933, //cor primária do gradiente. azulado.
+  gradient-secondary: #cc6600 //cor secundária do gradiente. roxo.
+);
+
+@mixin component-background {
+  background: -webkit-gradient(155deg, color($colors, gradient-primary), color($colors, gradient-secondary));
+  background: -o-linear-gradient(155deg,  color($colors, gradient-primary), color($colors, gradient-secondary));
+  background: -moz-linear-gradient(155deg,  color($colors, gradient-primary), color($colors, gradient-secondary));
+  background: linear-gradient(155deg,  color($colors, gradient-primary), color($colors, gradient-secondary));
+  background-repeat: repeat-x;
+}
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+// @import "roboto";
+// @import "noto-sans";
+
+$font-family-md-base: "RobotoCondensed-Regular" !default;
+$font-family-ios-base: "RobotoCondensed-Regular" !default;
+$font-family-wp-base: "RobotoCondensed-Regular" !default;
+$toolbar-md-title-text-color: color($colors, pearl);
+
+// $toolbar-background: linear-gradient(155deg, #00ca90, #00906f);
+
+body, span, button, h1, h2, h3, h4, h5, h6 {
+  font-family: 'RobotoCondensed-Regular' !important;
+}
+
+.no-scroll .scroll-content {
+  overflow: hidden;
+}
+.toolbar {
+  .toolbar-title {
+    font-size: 1.5rem !important;
+  }
+  ion-icon {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* clear android input focus... */
+ .item-md.item-input.input-has-focus .item-inner {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .list-md .item-input.input-has-focus:last-child {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .list-md .item-input.input-has-focus:last-child .item-inner {
+   box-shadow: none;
+ }
+
+ .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+   box-shadow: none;
+ }
+
+ .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+   border-bottom-color: transparent !important;
+   box-shadow: none !important;
+ }
+
+ .material-icons {
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;  /* Preferred icon size */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+
+   /* Support for IE. */
+   font-feature-settings: 'liga';
+ }
+
+ .gradient-fab {
+   button{
+     background: linear-gradient(155deg,  color($colors, gradient-primary), color($colors, gradient-secondary));
+   }
+ }
+
+ion-toast.success .toast-wrapper {
+  background: (#008001);
+}
+
+ion-toast.error .toast-wrapper {
+	background: (#c00000);
+}

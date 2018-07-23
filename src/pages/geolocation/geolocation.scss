@@ -1,0 +1,22 @@
+ion-app._gmaps_cdv_ .nav-decor{
+    background-color: transparent !important;
+}
+
+page-geolocation {
+    #map_canvas {
+    height: 100%;
+    }
+}
+
+.client-popup {
+    .action-sheet-sub-title{
+        padding-top: -30px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        color: color($colors, dark);
+        white-space: pre-wrap;
+    }
+    .action-sheet-title{
+        padding-bottom: 2px;
+    }
+}  

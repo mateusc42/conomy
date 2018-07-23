@@ -1,0 +1,90 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('../assets/fonts/RobotoCondensed-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .toolbar-background-md {
+    @include component-background;
+  }
+  
+  .list-md {
+    margin: 0px;
+  }
+  
+  ion-toolbar {
+    button {
+      color: color($colors, pearl);
+    }
+  }
+  
+  .menu-inner{
+    width: 375px;
+  }
+  
+  .menu-button {
+    p {
+      font-size: 1.3rem;
+    }
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: color($colors, dark);
+    background: linear-gradient(180deg,  color($colors, pearl), color($colors, light));
+  }
+  
+  .side-bar{
+    height: 145vh;
+    min-height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    ion-icon{
+      font-size: 3rem;
+      color: white;
+    }
+  
+    ion-col{
+      height: 84px;
+      padding-top: 25px;
+    }
+    @include component-background;
+  }
+  
+  .opportunity-drawer {
+    border-bottom: 3px solid color($colors, light);
+    ion-item{
+      padding-left: 30px;
+    }
+  }
+  
+  .small-img {
+    width: 80px;
+  }
+  
+  ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }

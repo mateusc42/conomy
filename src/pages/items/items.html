@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ItemsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Items</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list [virtualScroll]="listItems" [approxItemHeight]="'100px'">
+        <ion-card *virtualItem="let item">
+            <ion-row>
+            <ion-col>
+              <h2>{{item.name}}</h2>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                Preço Comum: R$ {{item.truePrice | number:'1.2-2'}}
+              </ion-note>
+            </ion-col>
+          </ion-row>
+        
+          <ion-row>
+            <ion-col>
+              <h4>Validade: {{item.validate}}</h4>
+            </ion-col>
+            <ion-col center text-center>
+              <h2>
+                COM DESCONTO: R$ {{item.discontPrice | number:'1.2-2'}}
+              </h2>
+            </ion-col>
+          </ion-row>
+        </ion-card>        
+    </ion-list>
+  </ion-content>
+
+  <ion-fab bottom right class="gradient-fab">
+    <button (click)="goList()" ion-fab>
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </button>
+  </ion-fab>
